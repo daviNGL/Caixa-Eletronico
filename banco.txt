@@ -1,0 +1,38 @@
+CREATE DATABASE caixa_eletronico;
+USE caixa_eletronico;
+
+CREATE TABLE cedula(
+
+valor int(3) not null,
+quantidade int(4) not null,
+
+PRIMARY KEY(valor)
+
+);
+
+INSERT INTO cedula VALUES
+(2, 0),
+(5, 0),
+(10, 0),
+(20, 0),
+(50, 0),
+(100, 0);
+
+
+CREATE TABLE extrato(
+
+id int not null auto_increment,
+data date,
+hora time,
+operacao_realizada varchar(30),
+valor_movimentado varchar(30),
+
+PRIMARY KEY(id)
+
+);
+
+CREATE TABLE cota_minima(
+valor int not null
+);
+
+INSERT INTO cota_minima VALUES(0);
